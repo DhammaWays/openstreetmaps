@@ -1,0 +1,9 @@
+INPUT_FILE = 'new-delhi_india.osm'
+
+{'lower': 186001, 'lower_colon': 7987, 'other': 168, 'problemchars': 4}
+
+Problematic Keys:
+[{'k': 'Gaurav General Store', 'v': 'convenience'},
+ {'k': 'Aggarwal Sweets', 'v': 'fast_food'},
+ {'k': 'Ladies Readymade Garments', 'v': ''},
+ {'k': 'M.S. FLAT', 'v': ''}]

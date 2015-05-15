@@ -1,0 +1,4 @@
+INPUT_FILE = 'new-delhi_india.osm'
+
+defaultdict(<type 'int'>, 
+{'node': 502661, 'nd': 650577, 'bounds': 1, 'member': 13577, 'tag': 194160, 'relation': 2389, 'way': 87420, 'osm': 1})
