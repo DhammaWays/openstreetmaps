@@ -1,13 +1,13 @@
-MongoDB shell version: 2.6.7
+﻿MongoDB shell version: 2.6.7
 connecting to: test
 Server has startup warnings: 
 2015-05-20T07:14:57.954+0000 ** WARNING: --rest is specified without --httpinterface,
 2015-05-20T07:14:57.957+0000 **          enabling http interface
-> use examples[3G[Juse examples[15G
+> use examples
 switched to db examples
-> db.maps.count()[3G[Jdb.maps.count()[18G
+> db.maps.count()
 590081
-> db.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}},[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}},[67G... {$sort: {count: -1}}])[5G[J{$sort: {count: -1}}])[27G
+> db.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])
 
 { "_id" : null, "count" : 586793 }
 { "_id" : "school", "count" : 880 }
@@ -29,8 +29,6 @@ switched to db examples
 { "_id" : "cafe", "count" : 48 }
 { "_id" : "embassy", "count" : 39 }
 { "_id" : "university", "count" : 33 }
-Type "it" for more
-> it[3G[Jit[5G
 { "_id" : "toilets", "count" : 28 }
 { "_id" : "post_office", "count" : 26 }
 { "_id" : "grave_yard", "count" : 24 }
@@ -51,8 +49,6 @@ Type "it" for more
 { "_id" : "courthouse", "count" : 6 }
 { "_id" : "arts_centre", "count" : 6 }
 { "_id" : "bench", "count" : 6 }
-Type "it" for more
-> it[3G[Jit[5G
 { "_id" : "nursing_home", "count" : 5 }
 { "_id" : "car_rental", "count" : 5 }
 { "_id" : "prison", "count" : 5 }
@@ -73,8 +69,6 @@ Type "it" for more
 { "_id" : "fairgrounds", "count" : 1 }
 { "_id" : "orphanage", "count" : 1 }
 { "_id" : "parking_entrance", "count" : 1 }
-Type "it" for more
-> it[3G[Jit[5G
 { "_id" : "traffic education", "count" : 1 }
 { "_id" : "Suvidha Market, Netaji Nagar", "count" : 1 }
 { "_id" : "recycling", "count" : 1 }
@@ -95,418 +89,8 @@ Type "it" for more
 { "_id" : "driving_school", "count" : 1 }
 { "_id" : "architect", "count" : 1 }
 { "_id" : "bureau_de_change", "count" : 1 }
-> it[3G[Jit[5G
-no cursor
-> [3G[Jit[5G[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G[1A[3G[Jdb.maps.aggregate[1;34m([0m [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[9G[1A[3G[Jit[5G[3G[Jit[5G
-no cursor
-> [3G[Jit[5G[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G[1A[3G[Jdb.maps.aggregate[1;34m([0m [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[9G[1A[3G[Jdb.maps.count()[18G[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G[1A[3G[Jit[5G[3G[Jit[5G
-no cursor
-> [3G[Jit[5G[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G[1A[3G[Jit[5G[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G[1A[3G[Jit[5G[3G[J[3G[3G[Jit[5G[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G[1A[3G[Jdb.maps.count()[18G[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G[1A[3G[Jit[5G[3G[Jit[5G
-no cursor
-> db.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {cou[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {coun
-[1G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count[2G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count:[3G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: [4G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -[5G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1[6G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}[7G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}[8G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}][9G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G[1A[3G[Jdb.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}])[10G
-{ "_id" : null, "count" : 586793 }
-{ "_id" : "school", "count" : 880 }
-{ "_id" : "place_of_worship", "count" : 297 }
-{ "_id" : "parking", "count" : 289 }
-{ "_id" : "fuel", "count" : 197 }
-{ "_id" : "hospital", "count" : 177 }
-{ "_id" : "restaurant", "count" : 130 }
-{ "_id" : "atm", "count" : 130 }
-{ "_id" : "college", "count" : 124 }
-{ "_id" : "bank", "count" : 100 }
-{ "_id" : "police", "count" : 85 }
-{ "_id" : "public_building", "count" : 81 }
-{ "_id" : "fast_food", "count" : 70 }
-{ "_id" : "bus_station", "count" : 68 }
-{ "_id" : "pharmacy", "count" : 63 }
-{ "_id" : "marketplace", "count" : 52 }
-{ "_id" : "cinema", "count" : 51 }
-{ "_id" : "cafe", "count" : 48 }
-{ "_id" : "embassy", "count" : 39 }
-{ "_id" : "university", "count" : 33 }
-Type "it" for more
-> it[3G[Jit[5G
-{ "_id" : "toilets", "count" : 28 }
-{ "_id" : "post_office", "count" : 26 }
-{ "_id" : "grave_yard", "count" : 24 }
-{ "_id" : "library", "count" : 24 }
-{ "_id" : "fountain", "count" : 22 }
-{ "_id" : "bar", "count" : 21 }
-{ "_id" : "fire_station", "count" : 18 }
-{ "_id" : "swimming_pool", "count" : 17 }
-{ "_id" : "post_box", "count" : 17 }
-{ "_id" : "taxi", "count" : 14 }
-{ "_id" : "kindergarten", "count" : 13 }
-{ "_id" : "theatre", "count" : 11 }
-{ "_id" : "community_centre", "count" : 10 }
-{ "_id" : "doctors", "count" : 9 }
-{ "_id" : "shelter", "count" : 7 }
-{ "_id" : "veterinary", "count" : 7 }
-{ "_id" : "telephone", "count" : 7 }
-{ "_id" : "courthouse", "count" : 6 }
-{ "_id" : "arts_centre", "count" : 6 }
-{ "_id" : "bench", "count" : 6 }
-Type "it" for more
-> it[3G[Jit[5G
-{ "_id" : "nursing_home", "count" : 5 }
-{ "_id" : "car_rental", "count" : 5 }
-{ "_id" : "prison", "count" : 5 }
-{ "_id" : "waste_basket", "count" : 5 }
-{ "_id" : "parking_space", "count" : 5 }
-{ "_id" : "clinic", "count" : 4 }
-{ "_id" : "drinking_water", "count" : 4 }
-{ "_id" : "bicycle_parking", "count" : 4 }
-{ "_id" : "pub", "count" : 4 }
-{ "_id" : "social_facility", "count" : 3 }
-{ "_id" : "dentist", "count" : 3 }
-{ "_id" : "auditorium", "count" : 3 }
-{ "_id" : "townhall", "count" : 3 }
-{ "_id" : "food_court", "count" : 2 }
-{ "_id" : "community_center", "count" : 1 }
-{ "_id" : "crematorium", "count" : 1 }
-{ "_id" : "community_hall", "count" : 1 }
-{ "_id" : "fairgrounds", "count" : 1 }
-{ "_id" : "orphanage", "count" : 1 }
-{ "_id" : "parking_entrance", "count" : 1 }
-Type "it" for more
-> it[3G[Jit[5G
-{ "_id" : "traffic education", "count" : 1 }
-{ "_id" : "Suvidha Market, Netaji Nagar", "count" : 1 }
-{ "_id" : "recycling", "count" : 1 }
-{ "_id" : "Garbage Collection Units", "count" : 1 }
-{ "_id" : "Delhi university women's college", "count" : 1 }
-{ "_id" : "car_wash", "count" : 1 }
-{ "_id" : "vending_machine", "count" : 1 }
-{ "_id" : "Bawana Bus depot", "count" : 1 }
-{ "_id" : "Ayurvedic Hospital", "count" : 1 }
-{ "_id" : "residential", "count" : 1 }
-{ "_id" : "House", "count" : 1 }
-{ "_id" : "biergarten", "count" : 1 }
-{ "_id" : "Electricity office", "count" : 1 }
-{ "_id" : "club", "count" : 1 }
-{ "_id" : "Netaji Nagar Market", "count" : 1 }
-{ "_id" : "baby_hatch", "count" : 1 }
-{ "_id" : "Ksan Ghat", "count" : 1 }
-{ "_id" : "driving_school", "count" : 1 }
-{ "_id" : "architect", "count" : 1 }
-{ "_id" : "bureau_de_change", "count" : 1 }
-> it[3G[Jit[5G
-no cursor
-> db.maps.aggregate([{$group: {_id:"$postcode", count:{$sum: 1}}}, sort[3G[Jdb.maps.aggregate([{$group: {_id:"$postcode", count:{$sum: 1}}}, sor[71G[3G[Jdb.maps.aggregate([{$group: {_id:"$postcode", count:{$sum: 1}}}, so[70G[3G[Jdb.maps.aggregate([{$group: {_id:"$postcode", count:{$sum: 1}}}, s[69G[3G[Jdb.maps.aggregate([{$group: {_id:"$postcode", count:{$sum: 1}}}, [68G[3G[Jdb.maps.aggregate([{$group: {_id:"$postcode", count:{$sum: 1}}}, [68G... {$sort: {count: -1}}])[5G[J{$sort: {count: -1}}])[27G
 
-{ "_id" : null, "count" : 590081 }
-> db.mmaps.find{[3G[Jdb.mmaps.find[16GOne({address:})[3G[Jdb.mmaps.findOne({address:})[31G
-2015-05-20T09:24:03.625+0000 SyntaxError: Unexpected token }
-> db.maps.findOne({address})[3G[Jdb.maps.findOne({address})[29G
-2015-05-20T09:24:38.185+0000 SyntaxError: Unexpected token }
-> db.maps.findOne({"address"})[3G[Jdb.maps.findOne({"address"})[31G
-2015-05-20T09:25:32.641+0000 SyntaxError: Unexpected token }
-> db.maps.findOne({address: {$ne: {}}})[3G[Jdb.maps.findOne({address: {$ne: {}}})[40G
-{
-	"_id" : ObjectId("555c34e024a7ab09847dc452"),
-	"name:ka" : "ნიუ-დელი",
-	"name:ko" : "뉴델리",
-	"name:kn" : "ಹೊಸ ದೆಹಲಿ",
-	"name:kl" : "New Delhi",
-	"name:cs" : "Nové Dillí",
-	"name:co" : "New Delhi",
-	"name:ku" : "Delhiya Nû",
-	"name:ks" : "نٔو دلھی",
-	"name:tl" : "Bagong Delhi",
-	"name:ta" : "புது தில்லி",
-	"name:tg" : "Ню-Дели",
-	"name:ca" : "Nova Delhi",
-	"is_in" : "National Capital Region, NCR, India",
-	"name:bat-smg" : "Naujasės Delės",
-	"name:cy" : "Delhi Newydd",
-	"name:simple" : "New Delhi",
-	"name:qu" : "Musuq Dilhi",
-	"name:da" : "New Delhi",
-	"name:de" : "Neu-Delhi",
-	"name:tr" : "Yeni Delhi",
-	"name:dv" : "ނިއުދިއްލީ",
-	"name:lv" : "Ņūdeli",
-	"name:lt" : "Naujasis Delis",
-	"name:kk" : "Нью-Дели",
-	"name:ur" : "نئی دہلی",
-	"name:lb" : "Nei-Delhi",
-	"name:la" : "Dellium Novum",
-	"name:uk" : "Нью-Делі",
-	"name:ug" : "Yéngi Déhli",
-	"name:el" : "Νέο Δελχί",
-	"name:eo" : "Nov-Delhio",
-	"name:en" : "New Delhi",
-	"name" : "New Delhi",
-	"name:th" : "นิวเดลี",
-	"name:lij" : "Neuva Delhi",
-	"is_in:continent" : "Asia",
-	"name:eu" : "New Delhi",
-	"name:et" : "New Delhi",
-	"name:es" : "Nueva Delhi",
-	"name:ia" : "Nove Delhi",
-	"name:ro" : "New Delhi",
-	"name:id" : "New Delhi",
-	"name:nah" : "Yancuīc Deli",
-	"name:ar" : "نيودلهي",
-	"name:io" : "Nova-Delhi",
-	"name:is" : "Nýja Delí",
-	"name:ckb" : "نیودلھی",
-	"name:am" : "ኒው ዴሊ",
-	"name:it" : "Nuova Delhi",
-	"name:an" : "Nueva Delhi",
-	"name:ru" : "Нью-Дели",
-	"name:cbk-zam" : "Nueva Delhi",
-	"name:af" : "Nieu-Delhi",
-	"wikipedia" : "en:New Delhi",
-	"capital" : "yes",
-	"name:zh-yue" : "新德里",
-	"name:te" : "క్రొత్త ఢిల్లీ",
-	"name:zh" : "新德里",
-	"name:so" : "New Delhi",
-	"name:sl" : "New Delhi",
-	"name:sk" : "Naí Dillí",
-	"name:war" : "New Delhi",
-	"name:si" : "නව දිල්ලිය",
-	"name:br" : "New Delhi",
-	"name:bs" : "New Delhi",
-	"name:bn" : "নতুন দিল্লি",
-	"name:bo" : "ནེའུ་དིལ་ལི།",
-	"name:sa" : "नवदेहली",
-	"name:sw" : "New Delhi",
-	"name:be" : "Нью-Дэлі",
-	"name:bg" : "Ню Делхи",
-	"name:sr" : "Њу Делхи",
-	"name:sq" : "New Delhi",
-	"created" : {
-		"changeset" : "28338777",
-		"version" : "40",
-		"user" : "lucadelu",
-		"timestamp" : "2015-01-22T22:33:08Z",
-		"uid" : "13591"
-	},
-	"place:cca" : "a1",
-	"name:jv" : "New Delhi",
-	"place" : "city",
-	"name:sah" : "Саҥа Дели",
-	"name:mzn" : "نو دهلی",
-	"name:pt" : "Nova Deli",
-	"name:oc" : "Nòva Delhi",
-	"pos" : [
-		28.6138967,
-		77.2159562
-	],
-	"is_capital" : "country",
-	"name:diq" : "Delhiyo Newe",
-	"name:zh-min-nan" : "Sin Delhi",
-	"name:os" : "Нью-Дели",
-	"name:pl" : "Nowe Delhi",
-	"name:pms" : "New Delhi",
-	"name:pa" : "ਨਵੀਂ ਦਿੱਲੀ",
-	"type" : "node",
-	"name:nov" : "Novi Deli",
-	"admin_level" : "2",
-	"name:sco" : "New Delhi",
-	"name:hi" : "नई दिल्ली",
-	"name:sv" : "New Delhi",
-	"name:he" : "ניו דלהי",
-	"name:bpy" : "নুৱা দিল্লী",
-	"name:ja" : "ニューデリー",
-	"name:pam" : "New Delhi",
-	"name:hy" : "Նյու Դելի",
-	"name:ht" : "Niou Deli",
-	"name:hr" : "New Delhi",
-	"population" : "11007835",
-	"name:lmo" : "New Delhi",
-	"name:pnb" : "نئی دلی",
-	"name:yi" : "ניי דעלי",
-	"name:ace" : "New delhi",
-	"name:yo" : "New Delhi",
-	"name:fiu-vro" : "New Delhi",
-	"name:ms" : "New Delhi",
-	"name:mr" : "नवी दिल्ली",
-	"name:my" : "နယူးဒေလီမြို့",
-	"name:mg" : "New Delhi",
-	"name:ml" : "ന്യൂ ഡെൽഹി",
-	"name:vi" : "Tân Delhi",
-	"name:mn" : "Шинэ Дели",
-	"name:mi" : "New Delhi",
-	"id" : "16173236",
-	"name:mk" : "Њу Делхи",
-	"name:fa" : "دهلی نو",
-	"is_in:country" : "India",
-	"name:fi" : "New Delhi",
-	"name:ext" : "Nueva Delhi",
-	"name:scn" : "Nova Delhi",
-	"name:hif" : "New Delhi",
-	"name:fr" : "New Delhi",
-	"name:fy" : "Nij Delly",
-	"name:gv" : "Delhi Noa",
-	"name:nl" : "New Delhi",
-	"name:nn" : "New Delhi",
-	"name:no" : "New Delhi",
-	"is_in:country_code" : "IN",
-	"name:ne" : "नयाँ दिल्ली",
-	"name:ang" : "Nīƿe Delhi",
-	"name:ga" : "Nua-Deilí",
-	"name:be-x-old" : "Нью-Дэлі",
-	"name:gd" : "New Delhi",
-	"name:gl" : "Nova Deli - नई दिल्ली",
-	"name:crh" : "Nyu Deli"
-}
-> db.maps.findOne()[3G[Jdb.maps.findOne()[20G
-{
-	"_id" : ObjectId("555c34e024a7ab09847dc452"),
-	"name:ka" : "ნიუ-დელი",
-	"name:ko" : "뉴델리",
-	"name:kn" : "ಹೊಸ ದೆಹಲಿ",
-	"name:kl" : "New Delhi",
-	"name:cs" : "Nové Dillí",
-	"name:co" : "New Delhi",
-	"name:ku" : "Delhiya Nû",
-	"name:ks" : "نٔو دلھی",
-	"name:tl" : "Bagong Delhi",
-	"name:ta" : "புது தில்லி",
-	"name:tg" : "Ню-Дели",
-	"name:ca" : "Nova Delhi",
-	"is_in" : "National Capital Region, NCR, India",
-	"name:bat-smg" : "Naujasės Delės",
-	"name:cy" : "Delhi Newydd",
-	"name:simple" : "New Delhi",
-	"name:qu" : "Musuq Dilhi",
-	"name:da" : "New Delhi",
-	"name:de" : "Neu-Delhi",
-	"name:tr" : "Yeni Delhi",
-	"name:dv" : "ނިއުދިއްލީ",
-	"name:lv" : "Ņūdeli",
-	"name:lt" : "Naujasis Delis",
-	"name:kk" : "Нью-Дели",
-	"name:ur" : "نئی دہلی",
-	"name:lb" : "Nei-Delhi",
-	"name:la" : "Dellium Novum",
-	"name:uk" : "Нью-Делі",
-	"name:ug" : "Yéngi Déhli",
-	"name:el" : "Νέο Δελχί",
-	"name:eo" : "Nov-Delhio",
-	"name:en" : "New Delhi",
-	"name" : "New Delhi",
-	"name:th" : "นิวเดลี",
-	"name:lij" : "Neuva Delhi",
-	"is_in:continent" : "Asia",
-	"name:eu" : "New Delhi",
-	"name:et" : "New Delhi",
-	"name:es" : "Nueva Delhi",
-	"name:ia" : "Nove Delhi",
-	"name:ro" : "New Delhi",
-	"name:id" : "New Delhi",
-	"name:nah" : "Yancuīc Deli",
-	"name:ar" : "نيودلهي",
-	"name:io" : "Nova-Delhi",
-	"name:is" : "Nýja Delí",
-	"name:ckb" : "نیودلھی",
-	"name:am" : "ኒው ዴሊ",
-	"name:it" : "Nuova Delhi",
-	"name:an" : "Nueva Delhi",
-	"name:ru" : "Нью-Дели",
-	"name:cbk-zam" : "Nueva Delhi",
-	"name:af" : "Nieu-Delhi",
-	"wikipedia" : "en:New Delhi",
-	"capital" : "yes",
-	"name:zh-yue" : "新德里",
-	"name:te" : "క్రొత్త ఢిల్లీ",
-	"name:zh" : "新德里",
-	"name:so" : "New Delhi",
-	"name:sl" : "New Delhi",
-	"name:sk" : "Naí Dillí",
-	"name:war" : "New Delhi",
-	"name:si" : "නව දිල්ලිය",
-	"name:br" : "New Delhi",
-	"name:bs" : "New Delhi",
-	"name:bn" : "নতুন দিল্লি",
-	"name:bo" : "ནེའུ་དིལ་ལི།",
-	"name:sa" : "नवदेहली",
-	"name:sw" : "New Delhi",
-	"name:be" : "Нью-Дэлі",
-	"name:bg" : "Ню Делхи",
-	"name:sr" : "Њу Делхи",
-	"name:sq" : "New Delhi",
-	"created" : {
-		"changeset" : "28338777",
-		"version" : "40",
-		"user" : "lucadelu",
-		"timestamp" : "2015-01-22T22:33:08Z",
-		"uid" : "13591"
-	},
-	"place:cca" : "a1",
-	"name:jv" : "New Delhi",
-	"place" : "city",
-	"name:sah" : "Саҥа Дели",
-	"name:mzn" : "نو دهلی",
-	"name:pt" : "Nova Deli",
-	"name:oc" : "Nòva Delhi",
-	"pos" : [
-		28.6138967,
-		77.2159562
-	],
-	"is_capital" : "country",
-	"name:diq" : "Delhiyo Newe",
-	"name:zh-min-nan" : "Sin Delhi",
-	"name:os" : "Нью-Дели",
-	"name:pl" : "Nowe Delhi",
-	"name:pms" : "New Delhi",
-	"name:pa" : "ਨਵੀਂ ਦਿੱਲੀ",
-	"type" : "node",
-	"name:nov" : "Novi Deli",
-	"admin_level" : "2",
-	"name:sco" : "New Delhi",
-	"name:hi" : "नई दिल्ली",
-	"name:sv" : "New Delhi",
-	"name:he" : "ניו דלהי",
-	"name:bpy" : "নুৱা দিল্লী",
-	"name:ja" : "ニューデリー",
-	"name:pam" : "New Delhi",
-	"name:hy" : "Նյու Դելի",
-	"name:ht" : "Niou Deli",
-	"name:hr" : "New Delhi",
-	"population" : "11007835",
-	"name:lmo" : "New Delhi",
-	"name:pnb" : "نئی دلی",
-	"name:yi" : "ניי דעלי",
-	"name:ace" : "New delhi",
-	"name:yo" : "New Delhi",
-	"name:fiu-vro" : "New Delhi",
-	"name:ms" : "New Delhi",
-	"name:mr" : "नवी दिल्ली",
-	"name:my" : "နယူးဒေလီမြို့",
-	"name:mg" : "New Delhi",
-	"name:ml" : "ന്യൂ ഡെൽഹി",
-	"name:vi" : "Tân Delhi",
-	"name:mn" : "Шинэ Дели",
-	"name:mi" : "New Delhi",
-	"id" : "16173236",
-	"name:mk" : "Њу Делхи",
-	"name:fa" : "دهلی نو",
-	"is_in:country" : "India",
-	"name:fi" : "New Delhi",
-	"name:ext" : "Nueva Delhi",
-	"name:scn" : "Nova Delhi",
-	"name:hif" : "New Delhi",
-	"name:fr" : "New Delhi",
-	"name:fy" : "Nij Delly",
-	"name:gv" : "Delhi Noa",
-	"name:nl" : "New Delhi",
-	"name:nn" : "New Delhi",
-	"name:no" : "New Delhi",
-	"is_in:country_code" : "IN",
-	"name:ne" : "नयाँ दिल्ली",
-	"name:ang" : "Nīƿe Delhi",
-	"name:ga" : "Nua-Deilí",
-	"name:be-x-old" : "Нью-Дэлі",
-	"name:gd" : "New Delhi",
-	"name:gl" : "Nova Deli - नई दिल्ली",
-	"name:crh" : "Nyu Deli"
-}
-> db.maps.findOne({address: {$exists: true}})[3G[Jdb.maps.findOne({address: {$exists: true}})[46G
+> db.maps.findOne({address: {$exists: true}})
 {
 	"_id" : ObjectId("555c34e124a7ab09847dcb14"),
 	"created" : {
@@ -527,38 +111,23 @@ no cursor
 	"type" : "node",
 	"id" : "266598403"
 }
-> [3G[Jdb.maps.findOne({address: {$exists: true}})[46G[3G[Jdb.maps.findOne({address: {$exists: true}}[45G[3G[Jdb.maps.findOne({address: {$exists: true}[44G[3G[Jdb.maps.findOne({address: {$exists: true[43G[3G[Jdb.maps.findOne({address: {$exists: tru[42G[3G[Jdb.maps.findOne({address: {$exists: tr[41G[3G[Jdb.maps.findOne({address: {$exists: t[40G[3G[Jdb.maps.findOne({address: {$exists: [39G[3G[Jdb.maps.findOne({address: {$exists:[38G[3G[Jdb.maps.findOne({address: {$exists[37G[3G[Jdb.maps.findOne({address: {$exist[36G[3G[Jdb.maps.findOne({address: {$exis[35G[3G[Jdb.maps.findOne({address: {$exi[34G[3G[Jdb.maps.findOne({address: {$ex[33G[3G[Jdb.maps.findOne({address: {$e[32G[3G[Jdb.maps.findOne({address: {$[31G[3G[Jdb.maps.findOne({address: {[30G[3G[Jdb.maps.findOne({address: [29G[3G[Jdb.maps.findOne({address:[28G[3G[Jdb.maps.findOne({address[27G[3G[Jdb.maps.findOne({addres[26G[3G[Jdb.maps.findOne({addre[25G[3G[Jdb.maps.findOne({addr[24G[3G[Jdb.maps.findOne({add[23G[3G[Jdb.maps.findOne({ad[22G[3G[Jdb.maps.findOne({a[21G[3G[Jdb.maps.findOne({[20G[3G[Jdb.maps.findOne([19G[3G[Jdb.maps.findOne[18G[3G[Jdb.maps.findOn[17G[3G[Jdb.maps.findO[16G[3G[Jdb.maps.find[15G[3G[Jdb.maps.fin[14Gd( {address: {$exists: false[3G[Jdb.maps.find( {address: {$exists: fals[41G[3G[Jdb.maps.find( {address: {$exists: fal[40G[3G[Jdb.maps.find( {address: {$exists: fa[39G[3G[Jdb.maps.find( {address: {$exists: f[38G[3G[Jdb.maps.find( {address: {$exists: [37Gtrue}} ).count()[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[53G
-2714
-> [3G[Jdb.maps.find( {address: {$exists: true}} ).count()[53G[3G[Jdb.maps.find( {address: {$exists: true}} ).count[1;34m([0m)[52G[3G[Jdb.maps.find( {address: {$exists: true}} ).count([1;34m)[0m[51G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[50G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[49G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[48G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[47G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[46G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[45G[3G[Jdb.maps.find[1;34m([0m {address: {$exists: true}} ).count()[44G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[43G[3G[Jdb.maps.find( [1;34m{[0maddress: {$exists: true}} ).count()[42G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: true}} ).count()[41G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[40G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: true}} ).count()[41G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: tru}} ).count()[40G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: tr}} ).count()[39G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: t}} ).count()[38G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: }} ).count()[37G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: f}} ).count()[38G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: fa}} ).count()[39G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: fal}} ).count()[40G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: fals}} ).count()[41G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: false}} ).count()[42G[3G[Jdb.maps.find( {address: {$exists: false}} ).count()[54G
-587367
-> [3G[Jdb.maps.find( {address: {$exists: false}} ).count()[54G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[53G[3G[Jdb.maps.find( {address: {$exists: true}} ).count[1;34m([0m)[52G[3G[Jdb.maps.find( {address: {$exists: true}} ).count([1;34m)[0m[51G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[50G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[49G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[48G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[47G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[46G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[45G[3G[Jdb.maps.find[1;34m([0m {address: {$exists: true}} ).count()[44G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[43G[3G[Jdb.maps.find( [1;34m{[0maddress: {$exists: true}} ).count()[42G[3G[Jdb.maps.find( {address: [1;34m{[0m$exists: true}} ).count()[41G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[40G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[39G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[38G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[37G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[36G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[35G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[34G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[33G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[32G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[31G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[30G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[29G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[28G[3G[Jdb.maps.find( {address: {$exists: true[1;34m}[0m} ).count()[27G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[26G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[25G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[24G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[23G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[24G[3G[Jdb.maps.find( {address: {$exists: true}} ).count()[25G[3G[Jdb.maps.find( {addres: {$exists: true}} ).count()[24G[3G[Jdb.maps.find( {addre: {$exists: true}} ).count()[23G[3G[Jdb.maps.find( {addr: {$exists: true}} ).count()[22G[3G[Jdb.maps.find( {add: {$exists: true}} ).count()[21G[3G[Jdb.maps.find( {ad: {$exists: true}} ).count()[20G[3G[Jdb.maps.find( {a: {$exists: true}} ).count()[19G[3G[Jdb.maps.find( {: {$exists: true}} ).count()[18G[3G[Jdb.maps.find( {p: {$exists: true}} ).count()[19G[3G[Jdb.maps.find( {po: {$exists: true}} ).count()[20G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[21G[3G[Jdb.maps.find( {post: {$exists: true}} ).count()[22G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[21G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[49G
-502661
-> [3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[49G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count[1;34m([0m)[48G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count([1;34m)[0m[47G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[46G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[45G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[44G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[43G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[42G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[41G[3G[Jdb.maps.find[1;34m([0m {pos: {$exists: true}} ).count()[40G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[39G[3G[Jdb.maps.find( [1;34m{[0mpos: {$exists: true}} ).count()[38G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: true}} ).count()[37G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: tru}} ).count()[36G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: tr}} ).count()[35G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: t}} ).count()[34G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: }} ).count()[33G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: f}} ).count()[34G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: fa}} ).count()[35G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: fal}} ).count()[36G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: fals}} ).count()[37G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: false}} ).count()[38G[3G[Jdb.maps.find( {pos: {$exists: false}} ).count()[50G
-87420
-> [3G[Jdb.maps.find( {pos: {$exists: false}} ).count()[50G[3G[Jdb.maps.find( {pos: {$exists: false}} ).count[1;34m([0m)[49G[3G[Jdb.maps.find( {pos: {$exists: false}} ).count([1;34m)[0m[48G[3G[Jdb.maps.find( {pos: {$exists: false}} ).count()[47G[3G[Jdb.maps.find( {pos: {$exists: false}} ).count()[46G[3G[Jdb.maps.find( {pos: {$exists: false}} ).count()[45G[3G[Jdb.maps.find( {pos: {$exists: false}} ).count()[44G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[49G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count[1;34m([0m)[48G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count([1;34m)[0m[47G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[46G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[45G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[44G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[43G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[42G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[41G[3G[Jdb.maps.find[1;34m([0m {pos: {$exists: true}} ).count()[40G[3G[Jdb.maps.find( {pos: {$exists: true}} ).count()[39G[3G[Jdb.maps.find( [1;34m{[0mpos: {$exists: true}} ).count()[38G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: true}} ).count()[37G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: true,}} ).count()[38G[3G[Jdb.maps.find( {pos: [1;34m{[0m$exists: true, }} ).count()[39G[3G[Jdb.maps.find( [1;34m{[0mpos: {$exists: true, }} ).count()[40G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[41G[3G[Jdb.maps.find[1;34m([0m {pos: {$exists: true, }} ).count()[42G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[43G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[44G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[45G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[46G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[47G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[48G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count([1;34m)[0m[49G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count[1;34m([0m)[50G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[51G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[51G
-502661
-> [3G[J[3G> db.maps.find({pos: {geowithin[3G[Jdb.maps.find({pos: {geowithi[31G[3G[Jdb.maps.find({pos: {geowith[30G[3G[Jdb.maps.find({pos: {geowit[29G[3G[Jdb.maps.find({pos: {geowi[28G[3G[Jdb.maps.find({pos: {geow[27G[3G[Jdb.maps.find({pos: {geo[26GWithin: {$[3G[Jdb.maps.find({pos: {geoWithin: {[35G[3G[Jdb.maps.find({pos: {geoWithin: [34G[3G[Jdb.maps.find({pos: {geoWithin:[33G[3G[Jdb.maps.find({pos: {geoWithin[32G[3G[Jdb.maps.find({pos: {geoWithi[31G[3G[Jdb.maps.find({pos: {geoWith[30G[3G[Jdb.maps.find({pos: {geoWit[29G[3G[Jdb.maps.find({pos: {geoWi[28G[3G[Jdb.maps.find({pos: {geoW[27G[3G[Jdb.maps.find({pos: {geo[26G[3G[Jdb.maps.find({pos: {ge[25G[3G[Jdb.maps.find({pos: {g[24G[3G[Jdb.maps.find({pos: {[23G$geowithin[3G[Jdb.maps.find({pos: {$geowithi[32G[3G[Jdb.maps.find({pos: {$geowith[31G[3G[Jdb.maps.find({pos: {$geowit[30G[3G[Jdb.maps.find({pos: {$geowi[29G[3G[Jdb.maps.find({pos: {$geow[28G[3G[Jdb.maps.find({pos: {$geo[27GWithin: {$box : [28.183, 76.692[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.183, 76.69[57G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.183, 76.6[56G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.183, 76.[55G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.183, 76[54G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.183, 7[53G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.183, [52G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.183,[51G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.183[50G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.18[49G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.1[48G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28.[47G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [28[46G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [2[45G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[44G[28.183, 76.692], [28.969, 77.733]]}[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}
-[1G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}[2G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}})[3G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).[4G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).c[5G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).co[6G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).cou[7G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).coun[8G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count[9G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count([10G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count()[11G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count()[11G
+> db.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count()
 
 502661
-> [3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count()[11G[1A[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[51G[3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[51G
-502661
-> [3G[Jdb.maps.find( {pos: {$exists: true, }} ).count()[51G[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count()[11G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count()[11G
-502661
-> [3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count()[11G[1A[3G[Jdb.maps.find({pos: {$geoWithin: {$box : [[28.183, 76.692], [28.969, 77.733]]}}}).count()[11G
-502661
-> db.maps.find({pos: {$not [3G[Jdb.maps.find({pos: {$not[27G: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.7
-[1G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.73[2G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733[3G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733][4G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]][5G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}[6G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}[7G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}[8G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}[9G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}})[10G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).[11G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).c[12G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).co[13G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).cou[14G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).coun[15G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).count[16G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).count([17G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).count()[18G[1A[3G[Jdb.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).count()[18G
+
+> db.maps.find({pos: {$not: {$geoWithin: {$box: [[28.183, 76.692], [28.969, 77.733]]}}}}).count()
 87420
-> db.maps.find(type: "node"[3G[Jdb.maps.find(type: "node[27G[3G[Jdb.maps.find(type: "nod[26G[3G[Jdb.maps.find(type: "no[25G[3G[Jdb.maps.find(type: "n[24G[3G[Jdb.maps.find(type: "[23G[3G[Jdb.maps.find(type: [22G[3G[Jdb.maps.find(type:[21G[3G[Jdb.maps.find(type[20G[3G[Jdb.maps.find(typ[19G[3G[Jdb.maps.find(ty[18G[3G[Jdb.maps.find(t[17G[3G[Jdb.maps.find([16G{type: "node")[3G[Jdb.maps.find({type: "node"[29G}).count()[3G[Jdb.maps.find({type: "node"}).count()[39G
+
+> db.maps.find({type: "node"}).count()
 502659
-> db.maps.find({type: "way}).count()[3G[Jdb.maps.find({type: "way}).count()[37G
-2015-05-20T13:03:33.129+0000 SyntaxError: Unexpected token ILLEGAL
-> [3G[Jdb.maps.find({type: "way}).count()[37G[3G[Jdb.maps.find({type: "way}).count([36G[3G[Jdb.maps.find({type: "way}).count[35G[3G[Jdb.maps.find({type: "way}).coun[34G[3G[Jdb.maps.find({type: "way}).cou[33G[3G[Jdb.maps.find({type: "way}).co[32G[3G[Jdb.maps.find({type: "way}).c[31G[3G[Jdb.maps.find({type: "way}).[30G[3G[Jdb.maps.find({type: "way})[29G[3G[Jdb.maps.find({type: "way}[28G[3G[Jdb.maps.find({type: "way[27G"}).count()[3G[Jdb.maps.find({type: "way"}).count()[38G
+
+> db.maps.find({type: "way"}).count()
 87276
-> db.maps.find({type: {$not [3G[Jdb.maps.find({type: {$not[28G: {$in [3G[Jdb.maps.find({type: {$not: {$in[34G: ["node", "way"]}}}).count()[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).count()[63G
+
+> db.maps.find({type: {$not: {$in: ["node", "way"]}}}).count()
 146
-> [3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).count()[63G[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).count([62G[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).count[61G[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).coun[60G[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).cou[59G[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).co[58G[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).c[57G[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).[56Glimit(10)[3G[Jdb.maps.find({type: {$not: {$in: ["node", "way"]}}}).limit(10)[65G
+
+> db.maps.find({type: {$not: {$in: ["node", "way"]}}}).limit(10)
 { "_id" : ObjectId("555c34e524a7ab09847dee00"), "name" : "Safdarjung Airport", "is_in:country" : "India", "wikipedia:en" : "Safdarjung_Airport", "created" : { "changeset" : "4804409", "version" : "3", "user" : "PlaneMad", "timestamp" : "2010-05-25T15:00:50Z", "uid" : "1306" }, "closest_town" : "New Delhi", "pos" : [ 28.5849375, 77.206542 ], "ele" : "215", "icao" : "VIDD", "source" : "wikipedia", "aeroway" : "aerodrome", "operator" : "Airports Authority of India", "military" : "airfield", "type" : "Public", "id" : "410403385" }
 { "_id" : ObjectId("555c35a224a7ab098484bae3"), "natural" : "tree", "name" : "Red Silk Cotton", "created" : { "changeset" : "22354228", "version" : "1", "user" : "gnowgi", "timestamp" : "2014-05-15T15:15:56Z", "uid" : "26673" }, "pos" : [ 28.5384073, 77.1946637 ], "denotation" : "avenue", "type" : "broad_palmate_leaves", "id" : "2860163526" }
 { "_id" : ObjectId("555c35ba24a7ab0984856fe0"), "admin_level" : "5", "node_refs" : [ "245765418", "2753154964", "2769850480" ], "created" : { "changeset" : "21515467", "version" : "32", "user" : "n'garh", "timestamp" : "2014-04-05T15:01:35Z", "uid" : "600918" }, "boundary" : "administrative", "type" : "boundary", "id" : "22826608" }
@@ -569,105 +138,16 @@ no cursor
 { "_id" : ObjectId("555c35d624a7ab098486797a"), "admin_level" : "10", "node_refs" : [ "2670353899", "2670353896" ], "created" : { "changeset" : "20544329", "version" : "1", "user" : "n'garh", "timestamp" : "2014-02-13T16:36:42Z", "uid" : "600918" }, "boundary" : "administrative", "type" : "boundary", "id" : "261419770" }
 { "_id" : ObjectId("555c35d624a7ab098486797b"), "admin_level" : "9", "node_refs" : [ "2670353898", "2670311276" ], "created" : { "changeset" : "20544329", "version" : "1", "user" : "n'garh", "timestamp" : "2014-02-13T16:36:42Z", "uid" : "600918" }, "boundary" : "administrative", "type" : "boundary", "id" : "261419771" }
 { "_id" : ObjectId("555c35d624a7ab098486797c"), "admin_level" : "10", "node_refs" : [ "2670353902", "2670353887" ], "created" : { "changeset" : "20558310", "version" : "3", "user" : "n'garh", "timestamp" : "2014-02-14T12:55:29Z", "uid" : "600918" }, "boundary" : "administrative", "type" : "boundary", "id" : "261419772" }
-> db.maps.group([3G[Jdb.maps.group[16G[3G[Jdb.maps.grou[15G[3G[Jdb.maps.gro[14G[3G[Jdb.maps.gr[13G[3G[Jdb.maps.g[12G[3G[Jdb.maps.[11G[3G[Jdb.maps[10G[3G[Jdb.map[9G[3G[Jdb.ma[8G[3G[Jdb.m[7G[3G[Jdb.[6G[3G[Jdb[5G[3G[Jd[4G[3G[J[3G[3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G>   [3G[J [4G[3G[J[3Gdb[3G[Jd[4G[3G[J[3Gquit()[3G[Jquit()[9GMongoDB shell version: 2.6.7
-connecting to: test
-Server has startup warnings: 
-2015-05-20T07:14:57.954+0000 ** WARNING: --rest is specified without --httpinterface,
-2015-05-20T07:14:57.957+0000 **          enabling http interface
-> db.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}][65G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}[64G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}[63G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}[62G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1[61G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: [60G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum:[59G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum[58G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$su[57G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$s[56G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$[55G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {[54G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: [53G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count:[52G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count[51G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", coun[50G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", cou[49G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", co[48G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", c[47G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", [46G[3G[Jdb.maps.aggregate([{$group: {_id: "$type",[45G[3G[Jdb.maps.aggregate([{$group: {_id: "$type"[44G[3G[Jdb.maps.aggregate([{$group: {_id: "$type[43G[3G[Jdb.maps.aggregate([{$group: {_id: "$typ[42G[3G[Jdb.maps.aggregate([{$group: {_id: "$ty[41G[3G[Jdb.maps.aggregate([{$group: {_id: "$t[40G[3G[Jdb.maps.aggregate([{$group: {_id: "$[39G[3G[Jdb.maps.aggregate([{$group: {_id: "[38G[3G[Jdb.maps.aggregate([{$group: {_id: [37G[3G[Jdb.maps.aggregate([{$group: {_id:[36G[3G[Jdb.maps.aggregate([{$group: {_id[35G[3G[Jdb.maps.aggregate([{$group: {_i[34G[3G[Jdb.maps.aggregate([{$group: {_[33G[3G[Jdb.maps.aggregate([{$group: {[32G[3G[Jdb.maps.aggregate([{$group: [31G[3G[Jdb.maps.aggregate([{$group:[30G[3G[Jdb.maps.aggregate([{$group[29G[3G[Jdb.maps.aggregate([{$grou[28G[3G[Jdb.maps.aggregate([{$gro[27G[3G[Jdb.maps.aggregate([{$gr[26G[3G[Jdb.maps.aggregate([{$g[25G[3G[Jdb.maps.aggregate([{$[24G[3G[Jdb.maps.aggregate([{[23G[3G[Jdb.maps.aggregate([[22G[3G[Jdb.maps.aggregate([21G[3G[Jdb.maps.aggregate[20G[3G[Jdb.maps.aggregat[19G[3G[Jdb.maps.aggrega[18G[3G[Jdb.maps.aggreg[17G[3G[Jdb.maps.aggre[16G[3G[Jdb.maps.aggr[15G[3G[Jdb.maps.agg[14G[3G[Jdb.maps.ag[13G[3G[Jdb.maps.a[12G[3G[Jdb.maps.[11G[3G[Jdb.maps[10G[3G[Jdb.map[9G[3G[Jdb.ma[8G[3G[Jdb.m[7G[3G[Jdb.[6G[3G[Jdb[5G[3G[Jd[4G[3G[J[3Guse examples[3G[Juse examples[15G
-switched to db examples
-> [3G[Juse examples[15G[3G[J;[4G[3G[J{count: -1}])[16G[3G[Jdb.maps.count()[18G[3G[Juse examples[15G[3G[Jdb.maps.count()[18G[3G[J{count: -1}])[16G[3G[J;[4G[3G[Juse examples[15G[3G[J[3Gdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[66G
+
+> db.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])
 { "_id" : "bpundary", "count" : 2 }
 { "_id" : "boundary", "count" : 142 }
 { "_id" : "way", "count" : 87276 }
 { "_id" : "Public", "count" : 1 }
 { "_id" : "broad_palmate_leaves", "count" : 1 }
 { "_id" : "node", "count" : 502659 }
-> [3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[66G[3G[Jdb.maps.aggregate[1;34m([0m[{$group: {_id: "$type", count: {$sum: 1}}}])[65G[3G[Jdb.maps.aggregate([1;34m[[0m{$group: {_id: "$type", count: {$sum: 1}}}])[64G[3G[Jdb.maps.aggregate([[1;34m{[0m$group: {_id: "$type", count: {$sum: 1}}}])[63G[3G[Jdb.maps.aggregate([{$group: [1;34m{[0m_id: "$type", count: {$sum: 1}}}])[62G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: [1;34m{[0m$sum: 1}}}])[61G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[60G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[59G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[58G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[57G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[56G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[55G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[54G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1[1;34m}[0m}}])[53G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[52G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[51G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[50G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[49G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[48G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[47G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[46G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[45G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[44G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[43G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[42G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[41G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[40G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[39G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[38G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[37G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[36G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[35G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[34G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[33G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[32G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}[1;34m}[0m}])[31G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[30G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[29G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[28G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[27G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[26G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[25G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[24G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[23G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}[1;34m}[0m])[22G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}[1;34m}[0m])[23G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[22G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}[1;34m}[0m])[23G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[24G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[25G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[26G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[27G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[28G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[29G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[30G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[31G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}[1;34m}[0m}])[32G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[33G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[34G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[35G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[36G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[37G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[38G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[39G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[40G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[41G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[42G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[43G[3G[Jdb.maps.aggregate([ {$group: {_id: "$type", count: {$sum: 1}}}])[44G[3G[Jdb.maps.aggregate([ {$group: {_id: "$typ", count: {$sum: 1}}}])[43G[3G[Jdb.maps.aggregate([ {$group: {_id: "$ty", count: {$sum: 1}}}])[42G[3G[Jdb.maps.aggregate([ {$group: {_id: "$t", count: {$sum: 1}}}])[41G[3G[Jdb.maps.aggregate([ {$group: {_id: "$", count: {$sum: 1}}}])[40G[3G[Jdb.maps.aggregate([ {$group: {_id: "$h", count: {$sum: 1}}}])[41G[3G[Jdb.maps.aggregate([ {$group: {_id: "$hi", count: {$sum: 1}}}])[42G[3G[Jdb.maps.aggregate([ {$group: {_id: "$hig", count: {$sum: 1}}}])[43G[3G[Jdb.maps.aggregate([ {$group: {_id: "$high", count: {$sum: 1}}}])[44G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highw", count: {$sum: 1}}}])[45G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highwa", count: {$sum: 1}}}])[46G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[47G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[46G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[45G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[44G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[43G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[42G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[41G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[40G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[39G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[38G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[37G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[36G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[35G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[34G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[33G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}[1;34m}[0m}])[32G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[31G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[30G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[29G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[28G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[27G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[26G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[25G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}}])[24G[3G[Jdb.maps.aggregate([ {$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[23G[3G[Jdb.maps.aggregate([ {{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[24G[3G[Jdb.maps.aggregate([ {${$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[25G[3G[Jdb.maps.aggregate([ {$t{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[26G[3G[Jdb.maps.aggregate([ {$ty{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[27G[3G[Jdb.maps.aggregate([ {$typ{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[28G[3G[Jdb.maps.aggregate([ {$type{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[29G[3G[Jdb.maps.aggregate([ {$typ{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[28G[3G[Jdb.maps.aggregate([ {$ty{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[27G[3G[Jdb.maps.aggregate([ {$t{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[26G[3G[Jdb.maps.aggregate([ {${$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[25G[3G[Jdb.maps.aggregate([ {{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[24G[3G[Jdb.maps.aggregate([ {t{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[25G[3G[Jdb.maps.aggregate([ {ty{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[26G[3G[Jdb.maps.aggregate([ {typ{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[27G[3G[Jdb.maps.aggregate([ {type{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[28G[3G[Jdb.maps.aggregate([ {type:{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[29G[3G[Jdb.maps.aggregate([ {type: {$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[30G[3G[Jdb.maps.aggregate([ {type: "{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[31G[3G[Jdb.maps.aggregate([ {type: "w{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[32G[3G[Jdb.maps.aggregate([ {type: "wa{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[33G[3G[Jdb.maps.aggregate([ {type: "way{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])
-[1A[34G[3G[Jdb.maps.aggregate([ {type: "way"{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[1A[35G[3G[Jdb.maps.aggregate([ {type: "way"}{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[1A[36G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}[1;34m}[0m])[1A[37G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G
-assert: command failed: {
-	"errmsg" : "exception: Unrecognized pipeline stage name: 'type'",
-	"code" : 16436,
-	"ok" : 0
-} : aggregate failed
-Error: command failed: {
-	"errmsg" : "exception: Unrecognized pipeline stage name: 'type'",
-	"code" : 16436,
-	"ok" : 0
-} : aggregate failed
-    at Error (<anonymous>)
-    at doassert (src/mongo/shell/assert.js:11:14)
-    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
-    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
-    at (shell):1:9
-2015-05-20T13:41:14.863+0000 Error: command failed: {
-	"errmsg" : "exception: Unrecognized pipeline stage name: 'type'",
-	"code" : 16436,
-	"ok" : 0
-} : aggregate failed at src/mongo/shell/assert.js:13
-> [3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J[3G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[66G[3G[Juse examples[15G[3G[Jdb.maps.aggregate([{$group: {_id: "$type", count: {$sum: 1}}}])[66G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J[3G[3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> db[3G[Jd[4G[3G[J[3G[3G[J[3G> [3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J[3G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J[3G[3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> db.maps.aggregate([{$mathc:[3G[Jdb.maps.aggregate([{$mathc[29G[3G[Jdb.maps.aggregate([{$math[28G[3G[Jdb.maps.aggregate([{$mat[27Gch: {type: way[3G[Jdb.maps.aggregate([{$match: {type: wa[40G[3G[Jdb.maps.aggregate([{$match: {type: w[39G[3G[Jdb.maps.aggregate([{$match: {type: [38G"way"}}, {$group: {_id:"$type[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$typ[66G[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$ty[65G[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$t[64G[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$[63Ghighway", count:{[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$
-[1G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$s[2G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$su[3G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum[4G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:[5G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1[6G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}[7G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}[8G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}[9G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}},[10G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, [11G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {[12G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$[13G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$s[14G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$so[15G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sor[16G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sor:[17G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sor: [18G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sor:[17G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sor[16G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort[17G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort:[18G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: [19G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {[20G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {c[21G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {co[22G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {cou[23G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {coun[24G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count[25G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count:[26G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count: [27G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count: -[28G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count: -1[29G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count: -1}[30G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count: -1}}[31G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count: -1}}][32G[1A[3G[Jdb.maps.aggregate([{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum:1}}}, {$sort: {count: -1}}][32G... [5G[J[5G... [5G[J[5G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J;[4G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-assert: command failed: {
-	"errmsg" : "exception: Unrecognized pipeline stage name: 'type'",
-	"code" : 16436,
-	"ok" : 0
-} : aggregate failed
-Error: command failed: {
-	"errmsg" : "exception: Unrecognized pipeline stage name: 'type'",
-	"code" : 16436,
-	"ok" : 0
-} : aggregate failed
-    at Error (<anonymous>)
-    at doassert (src/mongo/shell/assert.js:11:14)
-    at Function.assert.commandWorked (src/mongo/shell/assert.js:244:5)
-    at DBCollection.aggregate (src/mongo/shell/collection.js:1149:12)
-    at (shell):1:9
-2015-05-20T13:47:19.499+0000 Error: command failed: {
-	"errmsg" : "exception: Unrecognized pipeline stage name: 'type'",
-	"code" : 16436,
-	"ok" : 0
-} : aggregate failed at src/mongo/shell/assert.js:13
-> [3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J[3G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J;[4G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J[3G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J;[4G[3G[Jdb.maps.aggregate([ {type: "way"},{$group: {_id: "$highway", count: {$sum: 1}}}])[4G[1A[3G[J[3G[3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> db.maps.aggregate([[3G[Jdb.maps.aggregate([[22G... {$match: {"$type"[5G[J{$match: {"$type[21G[5G[J{$match: {"$typ[20G[5G[J{$match: {"$ty[19G[5G[J{$match: {"$t[18G[5G[J{$match: {"$[17G[5G[J{$match: {"[16G[5G[J{$match: {[15G[5G[J{$match: [14G[5G[J{$match:[13G[5G[J{$match[12G[5G[J{$matc[11G[5G[J{$mat[10G[5G[J{$ma[9G[5G[J{$m[8G[5G[J{$[7G[5G[J{[6G[5G[J[5G[5G[J[5G... [5G[J[5G> quit()[3G[Jquit()[9GMongoDB shell version: 2.6.7
-connecting to: test
-Server has startup warnings: 
-2015-05-20T07:14:57.954+0000 ** WARNING: --rest is specified without --httpinterface,
-2015-05-20T07:14:57.957+0000 **          enabling http interface
-> use examples[3G[Juse examples[15G
-switched to db examples
-> [3G[Juse examples[15G[3G[J[3Gdb.maps.aggregate[ {$mathc[3G[Jdb.maps.aggregate[ {$math[28G[3G[Jdb.maps.aggregate[ {$mat[27Gch: {type: "way"}},[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[45G[3G[Jdb.maps.aggregate[ [1;34m{[0m$match: {type: "way"}},[44G[3G[Jdb.maps.aggregate[ {$match: [1;34m{[0mtype: "way"}},[43G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[42G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[41G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[40G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[39G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[38G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[37G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[36G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[35G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[34G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[33G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[32G[3G[Jdb.maps.aggregate[ {$match: {type: "way"[1;34m}[0m},[31G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[30G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[29G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[28G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[27G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[26G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[25G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[24G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[23G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}[1;34m}[0m,[22G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[21G[3G[Jdb.maps.aggregate[ {$match: {type: "way"}},[20G[3G[Jdb.maps.aggregate([ {$match: {type: "way"}},[21G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[22G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[23G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}[1;34m}[0m,[24G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[25G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[26G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[27G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[28G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[29G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[30G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[31G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[32G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"[1;34m}[0m},[33G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[34G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[35G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[36G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[37G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[38G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[39G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[40G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[41G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[42G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[43G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[44G[3G[Jdb.maps.aggregate( [ {$match: [1;34m{[0mtype: "way"}},[45G[3G[Jdb.maps.aggregate( [ [1;34m{[0m$match: {type: "way"}},[46G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[47G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[48G[3G[Jdb.maps.aggregate( [ {$match: {type: "way"}},[48G... {$group: {_id:"$highway", count:{$sum: 1}}},[5G[J{$group: {_id:"$highway", count:{$sum: 1}}},[49G... {$sort: {count: -1}} ] )[5G[J{$sort: {count: -1}} ] )[29G
-
+> db.maps.aggregate( [ {$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum: 1}}}, {$sort: {count: -1}} ] )
 
 { "_id" : "residential", "count" : 35686 }
 { "_id" : null, "count" : 23649 }
@@ -689,8 +169,6 @@ switched to db examples
 { "_id" : "pedestrian", "count" : 114 }
 { "_id" : "motorway_link", "count" : 97 }
 { "_id" : "secondary_link", "count" : 84 }
-Type "it" for more
-> it[3G[Jit[5G
 { "_id" : "tertiary_link", "count" : 26 }
 { "_id" : "cycleway", "count" : 23 }
 { "_id" : "raceway", "count" : 13 }
@@ -699,24 +177,17 @@ Type "it" for more
 { "_id" : "proposed", "count" : 7 }
 { "_id" : "services", "count" : 6 }
 { "_id" : "rest_area", "count" : 6 }
-> it[3G[Jit[5G
-no cursor
-> db.maps.find({address: {$exis[3G[Jdb.maps.find({address: {$exi[31G[3G[Jdb.maps.find({address: {$ex[30G[3G[Jdb.maps.find({address: {$e[29G[3G[Jdb.maps.find({address: {$[28G[3G[Jdb.maps.find({address: {[27G[3G[Jdb.maps.find({address: [26G[3G[Jdb.maps.find({address:[25G[3G[Jdb.maps.find({address[24G.postcode: {$exists: true}}).count()[3G[Jdb.maps.find({address.postcode: {$exists: true}}).count()[60G
-2015-05-20T14:00:11.485+0000 SyntaxError: Unexpected token .
-> [3G[Jdb.maps.find({address.postcode: {$exists: true}}).count()[60G[3G[Jdb.maps.find({address.postcode: {$exists: true}}).count([59G[3G[Jdb.maps.find({address.postcode: {$exists: true}}).count[58G[3G[Jdb.maps.find({address.postcode: {$exists: true}}).coun[57G[3G[Jdb.maps.find({address.postcode: {$exists: true}}).cou[56G[3G[Jdb.maps.find({address.postcode: {$exists: true}}).co[55G[3G[Jdb.maps.find({address.postcode: {$exists: true}}).c[54G[3G[Jdb.maps.find({address.postcode: {$exists: true}}).[53G[3G[Jdb.maps.find({address.postcode: {$exists: true}})[52G[3G[Jdb.maps.find({address.postcode: {$exists: true}}[51G[3G[Jdb.maps.find({address.postcode: {$exists: true}[50G[3G[Jdb.maps.find({address.postcode: {$exists: true[49G[3G[Jdb.maps.find({address.postcode: {$exists: tru[48G[3G[Jdb.maps.find({address.postcode: {$exists: tr[47G[3G[Jdb.maps.find({address.postcode: {$exists: t[46G[3G[Jdb.maps.find({address.postcode: {$exists: [45GTrue}}).count()[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[60G
-2015-05-20T14:00:40.801+0000 SyntaxError: Unexpected token .
-> [3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[60G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count[1;34m([0m)[59G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count([1;34m)[0m[58G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[57G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[56G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[55G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[54G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[53G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[52G[3G[Jdb.maps.find[1;34m([0m{address.postcode: {$exists: True}}).count()[51G[3G[Jdb.maps.find([1;34m{[0maddress.postcode: {$exists: True}}).count()[50G[3G[Jdb.maps.find({address.postcode: [1;34m{[0m$exists: True}}).count()[49G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[48G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[47G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[46G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[45G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[44G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[43G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[42G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[41G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[40G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[39G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[38G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[37G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[36G[3G[Jdb.maps.find({address.postcode: {$exists: True[1;34m}[0m}).count()[35G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[34G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[33G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[32G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[31G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[30G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[29G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[28G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[27G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[26G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[25G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[24G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[23G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[22G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[21G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[20G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[19G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[18G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[17G[3G[Jdb.maps.find({address.postcode: {$exists: True}[1;34m}[0m).count()[16G[3G[Jdb.maps.find({address.postcode: {$exists: True}}[1;34m)[0m.count()[15G[3G[Jdb.maps.find({address.postcode: {$exists: True}[1;34m}[0m).count()[16G[3G[Jdb.maps.find({address.postcode: {$exists: True}}).count()[17G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[18G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[19G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[20G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[21G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[22G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[23G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[24G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[25G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[26G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[27G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[28G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[29G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[30G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[31G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[32G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[33G[3G[Jdb.maps.find({"address.postcode: {$exists: True}}).count()[34G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[35G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[62G
-2015-05-20T14:03:14.338+0000 ReferenceError: True is not defined
-> [3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[62G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count[1;34m([0m)[61G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count([1;34m)[0m[60G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[59G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[58G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[57G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[56G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[55G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[54G[3G[Jdb.maps.find[1;34m([0m{"address.postcode": {$exists: True}}).count()[53G[3G[Jdb.maps.find([1;34m{[0m"address.postcode": {$exists: True}}).count()[52G[3G[Jdb.maps.find({"address.postcode": [1;34m{[0m$exists: True}}).count()[51G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[50G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[49G[3G[Jdb.maps.find({"address.postcode": {$exists: True}}).count()[48G[3G[Jdb.maps.find({"address.postcode": {$exists: rue}}).count()[47G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).count()[48G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).count()[62G
+
+> db.maps.find({"address.postcode": {$exists: true}}).count()
 676
-> [3G[Jdb.maps.find({"address.postcode": {$exists: true}}).count()[62G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).count([61G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).count[60G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).coun[59G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).cou[58G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).co[57G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).c[56G[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).[55Glimit(5)[3G[Jdb.maps.find({"address.postcode": {$exists: true}}).limit(5)[63G
+> db.maps.find({"address.postcode": {$exists: true}}).limit(5)
 { "_id" : ObjectId("555c34e324a7ab09847dde3f"), "website" : "http://www.vivantabytaj.com/Ambassador-New-Delhi/Overview.html", "name" : "The Ambassador", "created" : { "changeset" : "20863949", "version" : "2", "user" : "apm-wa", "timestamp" : "2014-03-02T13:08:07Z", "uid" : "1960718" }, "type" : "node", "pos" : [ 28.6017391, 77.228846 ], "phone" : "+91 11 6626 1000", "address" : { "city" : "New Delhi", "street" : "Sujan Singh Park, Subramania Bharti Marg,Behind Khan Market", "postcode" : "110003" }, "operator" : "Vivanta by Taj", "tourism" : "hotel", "id" : "308894056" }
 { "_id" : ObjectId("555c34e424a7ab09847de9ea"), "created" : { "changeset" : "3010394", "version" : "2", "user" : "Ropino", "timestamp" : "2009-11-01T19:49:52Z", "uid" : "42123" }, "pos" : [ 28.5514681, 77.2954887 ], "address" : { "city" : "Neew Delhi", "street" : "Abul Fazal Road", "housenumber" : "M-91", "postcode" : "110025" }, "type" : "node", "id" : "367288184" }
 { "_id" : ObjectId("555c34e424a7ab09847de9fc"), "website" : "http://www.claridges.com/index.asp", "name" : "Claridges Hotel", "created" : { "changeset" : "20864091", "version" : "3", "user" : "apm-wa", "timestamp" : "2014-03-02T13:16:13Z", "uid" : "1960718" }, "type" : "node", "pos" : [ 28.6006254, 77.2165438 ], "phone" : "+91 11 3955 5000", "address" : { "city" : "New Delhi", "street" : "Aurangzeb Road", "housenumber" : "12", "postcode" : "110011" }, "operator" : "Claridges Hotels Pvt. Ltd.", "tourism" : "hotel", "id" : "370584997" }
 { "_id" : ObjectId("555c34ec24a7ab09847e3603"), "created" : { "changeset" : "20538540", "version" : "2", "user" : "n'garh", "timestamp" : "2014-02-13T11:07:33Z", "uid" : "600918" }, "pos" : [ 28.5101464, 77.1636955 ], "address" : { "city" : "New Delhi", "housename" : "Nora Nivas", "street" : "Bhavani Kunj, Vasant Kunj", "postcode" : "110070", "country" : "IN", "housenumber" : "69" }, "type" : "node", "id" : "517038900" }
 { "_id" : ObjectId("555c34ec24a7ab09847e3604"), "created" : { "changeset" : "2707434", "version" : "1", "user" : "thevikas", "timestamp" : "2009-10-02T02:55:04Z", "uid" : "17429" }, "pos" : [ 28.510182, 77.1634311 ], "address" : { "city" : "New Delhi", "housename" : "Nora Nivas", "street" : "Bhavani Kunj, Vasant Kunj", "postcode" : "110070", "country" : "IN", "housenumber" : "68" }, "type" : "node", "id" : "517038901" }
-> db.maps.aggregate([{$group: {_id:"$address.city", pin[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", pi[55G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", p[54G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", [53Gpostcodes:[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", postcodes[62G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", postcode[61G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", postcod[60G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", postco[59G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", postc[58G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", post[57G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", pos[56G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", po[55G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", p[54G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", [53Gzipcodes:{$addToSet: "$addr[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$addre
-[1G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$addres[2G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address[3G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.[4G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.p[5G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.po[6G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.pos[7G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.post[8G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postc[9G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postco[10G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcod[11G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode[12G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"[13G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}[14G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}[15G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}[16G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}][17G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}])[18G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}])[18G
+
+> db.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}])
 { "_id" : "Noida, Uttar Pradesh", "zipcodes" : [ "201301" ] }
 { "_id" : "Pocket 6, Sector 9, Rohini, New Delhi", "zipcodes" : [ "110085" ] }
 { "_id" : "Gaziabad", "zipcodes" : [ "201001" ] }
@@ -737,8 +208,6 @@ no cursor
 { "_id" : "West Karawal Nagar, New Delhi", "zipcodes" : [ "110094" ] }
 { "_id" : "Alipur, Delhi", "zipcodes" : [ ] }
 { "_id" : "Sector-11, Rohini, Delhi", "zipcodes" : [ "110085" ] }
-Type "it" for more
-> it[3G[Jit[5G
 { "_id" : "New Delhi", "zipcodes" : [ "110034", "110087", "110092", "110065", "110005v", "110038", "110022", "110063", "110031", "110023", "110010", "110006", "110 001", "110044", "110019", "110015", "110020", "110037", "110046", "110014", "1100016", "110002", "110075", "110003", "110024", "110054", "110005", "110070", "110048", "110018", "110016", "110025", "110085", "110011", "110021", "110096", "110017", "110067", "110055", "110001", "110029", "1100049", "110058", "110078", "110008" ] }
 { "_id" : "Austin", "zipcodes" : [ "78703" ] }
 { "_id" : "Toronto", "zipcodes" : [ "M5G 1C3" ] }
@@ -759,8 +228,6 @@ Type "it" for more
 { "_id" : "Old Delhi", "zipcodes" : [ "110006" ] }
 { "_id" : "Gurgaon", "zipcodes" : [ "122003", "2242", "122004", "122016", "122002", "122017", "122001", "122018" ] }
 { "_id" : "Pitam Pura, New Delhi", "zipcodes" : [ "110088" ] }
-Type "it" for more
-> it[3G[Jit[5G
 { "_id" : "Faridabad", "zipcodes" : [ "121008", "Eicher service Station", "121003" ] }
 { "_id" : "Meerut", "zipcodes" : [ "250003" ] }
 { "_id" : "Uttar Pradesh", "zipcodes" : [ "201301" ] }
@@ -777,88 +244,9 @@ Type "it" for more
 { "_id" : "Dadri", "zipcodes" : [ "203207" ] }
 { "_id" : "Badli Industrial Area, Badli, Delhi", "zipcodes" : [ "110042" ] }
 { "_id" : "Sohna Road", "zipcodes" : [ "122018" ] }
-> it[3G[Jit[5G
-no cursor
-> [3G[Jit[5G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}])[18G[1A[3G[Jit[5G[3G[J[3G[3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> [3G[J[3G> db.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$addr[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$addre
-[1G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$addres[2G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address[3G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.[4G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.p[5G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.po[6G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.pos[7G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.post[8G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postc[9G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postco[10G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcod[11G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode[12G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"[13G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}[14G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}[15G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}[16G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}][17G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}])[18G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}])[18G
 
+> db.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: -1}}])
 
-
-
-
-
-
-
-
-
-
-{ "_id" : "Noida, Uttar Pradesh", "zipcodes" : [ "201301" ] }
-{ "_id" : "Pocket 6, Sector 9, Rohini, New Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : "Gaziabad", "zipcodes" : [ "201001" ] }
-{ "_id" : "Janakpuri", "zipcodes" : [ "110058" ] }
-{ "_id" : "Sector - 11, Rohini, Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : "Sector - 28, Rohini, Delhi", "zipcodes" : [ "110042" ] }
-{ "_id" : "Shahbad Daulatpur, Delhi", "zipcodes" : [ "110042" ] }
-{ "_id" : "Sector- 10, Rohini, Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : null, "zipcodes" : [ "121001", "201007", "110076", "201009", "201308", "110006", "110052", "110008", "122018", "110035", "201014", "110055", "420420", "020626", "110003", "110043", "110075", "110002", "110047", "121002", "122011", "122016", "110042", "110085", "110096", "110017", "110067", "1100002", "110021", "201001", "110092", "110054", "Sunpat House Village", "201301", "122002", "110074", "201011", "110065", "201307", "110016", "201010" ] }
-{ "_id" : "Indirapuram", "zipcodes" : [ ] }
-{ "_id" : "Sahibabad, Ghaziabad", "zipcodes" : [ "201010" ] }
-{ "_id" : "Sector - 15, Rohini, Delhi", "zipcodes" : [ "110089" ] }
-{ "_id" : "Rohini, Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : "Paschim Vihar, New Delhi", "zipcodes" : [ "110087" ] }
-{ "_id" : "Muradnagar", "zipcodes" : [ ] }
-{ "_id" : "Noida (U.P)", "zipcodes" : [ "201303" ] }
-{ "_id" : "Pandav Nagar, New Delhi", "zipcodes" : [ ] }
-{ "_id" : "West Karawal Nagar, New Delhi", "zipcodes" : [ "110094" ] }
-{ "_id" : "Alipur, Delhi", "zipcodes" : [ ] }
-{ "_id" : "Sector-11, Rohini, Delhi", "zipcodes" : [ "110085" ] }
-Type "it" for more
-> it[3G[Jit[5G
-{ "_id" : "New Delhi", "zipcodes" : [ "110034", "110087", "110092", "110065", "110005v", "110038", "110022", "110063", "110031", "110023", "110010", "110006", "110 001", "110044", "110019", "110015", "110020", "110037", "110046", "110014", "1100016", "110002", "110075", "110003", "110024", "110054", "110005", "110070", "110048", "110018", "110016", "110025", "110085", "110011", "110021", "110096", "110017", "110067", "110055", "110001", "110029", "1100049", "110058", "110078", "110008" ] }
-{ "_id" : "Austin", "zipcodes" : [ "78703" ] }
-{ "_id" : "Toronto", "zipcodes" : [ "M5G 1C3" ] }
-{ "_id" : "Naya Band, Khera", "zipcodes" : [ ] }
-{ "_id" : "Sector - 10, Rohini,, Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : "Delhi", "zipcodes" : [ "110011", "110085", "110092", "110035", "110089", "201301", "110076", "110062", "110058", "110084", "201304", "110031v", "110052", "10089", "110096", "110093", "110001", "110087", "110006", "110002", "110091", "110054", "110067", "110032", "110020", "110034", "100006" ] }
-{ "_id" : "Hira Colony, Siraspur, Delhi", "zipcodes" : [ "110042" ] }
-{ "_id" : "Rohini Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : "Greater Noida", "zipcodes" : [ "201310", "201306" ] }
-{ "_id" : "Gurgaon, Haryana", "zipcodes" : [ "122016" ] }
-{ "_id" : "Sector - 5, Rohini, Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : "meerut", "zipcodes" : [ "250004" ] }
-{ "_id" : "Ghaziabad", "zipcodes" : [ "201010", "201005", "2010", "201002", "201001", "201014" ] }
-{ "_id" : "Noida , Uttar Pradesh", "zipcodes" : [ "201301" ] }
-{ "_id" : "Dwarka", "zipcodes" : [ "110075" ] }
-{ "_id" : "Pratap Colony, Siraspur, Delhi", "zipcodes" : [ "110042" ] }
-{ "_id" : "Libaspur, Delhi", "zipcodes" : [ "110042" ] }
-{ "_id" : "Old Delhi", "zipcodes" : [ "110006" ] }
-{ "_id" : "Gurgaon", "zipcodes" : [ "122003", "2242", "122004", "122016", "122002", "122017", "122001", "122018" ] }
-{ "_id" : "Pitam Pura, New Delhi", "zipcodes" : [ "110088" ] }
-Type "it" for more
-> it[3G[Jit[5G
-{ "_id" : "Faridabad", "zipcodes" : [ "121008", "Eicher service Station", "121003" ] }
-{ "_id" : "Meerut", "zipcodes" : [ "250003" ] }
-{ "_id" : "Uttar Pradesh", "zipcodes" : [ "201301" ] }
-{ "_id" : "noida", "zipcodes" : [ "201301" ] }
-{ "_id" : "Chanakyapuri, New Delhi", "zipcodes" : [ "110021" ] }
-{ "_id" : "Noida", "zipcodes" : [ "201309", "201304", "201307", "201303", "201308", "2013010", "101301", "203135", "203202", "201010", "201301" ] }
-{ "_id" : "Mukhrejee Nagar, Delhi", "zipcodes" : [ ] }
-{ "_id" : "Siraspur, Delhi", "zipcodes" : [ "110042" ] }
-{ "_id" : "new delhi", "zipcodes" : [ "110055" ] }
-{ "_id" : "Sector - 12, Rohini, Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : "Sector - 17, Rohini, Delhi", "zipcodes" : [ "110085" ] }
-{ "_id" : "delhi", "zipcodes" : [ "110006", "110002" ] }
-{ "_id" : "Neew Delhi", "zipcodes" : [ "110025" ] }
-{ "_id" : "Dadri", "zipcodes" : [ "203207" ] }
-{ "_id" : "Badli Industrial Area, Badli, Delhi", "zipcodes" : [ "110042" ] }
-{ "_id" : "Sohna Road", "zipcodes" : [ "122018" ] }
-> it[3G[Jit[5G
-no cursor
-> db.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$addr[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$addre
-[1G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$addres[2G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address[3G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.[4G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.p[5G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.po[6G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.pos[7G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.post[8G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postc[9G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postco[10G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcod[11G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode[12G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"[13G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}[14G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}[15G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}[16G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}][17G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}])[18G[1A[3G[Jit[5G[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes:{$addToSet: "$address.postcode"}}}])[18G[1A[3G[Jit[5G[3G[Jit[5G
-no cursor
-> db.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$add[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$addr
-[1G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$addre[2G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$addres[3G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address[4G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.[5G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.p[6G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.po[7G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.pos[8G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.post[9G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postc[10G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postco[11G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcod[12G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode[13G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"[14G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}[15G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"},[16G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, [17G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, c[18G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, co[19G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, cou[20G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, coun[21G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count[22G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:[23G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{[24G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$[25G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$s[26G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$su[27G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum[28G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum:[29G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: [30G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1[31G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}[32G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}[33G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}[34G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}},[35G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, [36G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {[37G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$[38G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$s[39G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$so[40G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sor[41G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort[42G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort:[43G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: [44G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {[45G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {c[46G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {co[47G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {cou[48G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {coun[49G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count[50G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count:[51G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: [52G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: -[53G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: -1[54G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: -1}[55G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: -1}}[56G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: -1}}][57G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: -1}}])[58G[1A[3G[Jdb.maps.aggregate([{$group: {_id:"$address.city", zipcodes: {$addToSet: "$address.postcode"}, count:{$sum: 1}}}, {$sort: {count: -1}}])[58G
 { "_id" : null, "zipcodes" : [ "121001", "201007", "110076", "201009", "201308", "110006", "110052", "110008", "122018", "110035", "201014", "110055", "420420", "020626", "110003", "110043", "110075", "110002", "110047", "121002", "122011", "122016", "110042", "110085", "110096", "110017", "110067", "1100002", "110021", "201001", "110092", "110054", "Sunpat House Village", "201301", "122002", "110074", "201011", "110065", "201307", "110016", "201010" ], "count" : 588936 }
 { "_id" : "Greater Noida", "zipcodes" : [ "201310", "201306" ], "count" : 334 }
 { "_id" : "Gurgaon", "zipcodes" : [ "122003", "2242", "122004", "122016", "122002", "122017", "122001", "122018" ], "count" : 259 }
@@ -879,8 +267,6 @@ no cursor
 { "_id" : "Mukhrejee Nagar, Delhi", "zipcodes" : [ ], "count" : 4 }
 { "_id" : "Alipur, Delhi", "zipcodes" : [ ], "count" : 3 }
 { "_id" : "delhi", "zipcodes" : [ "110006", "110002" ], "count" : 3 }
-Type "it" for more
-> it[3G[Jit[5G
 { "_id" : "Sector - 28, Rohini, Delhi", "zipcodes" : [ "110042" ], "count" : 2 }
 { "_id" : "Sector - 15, Rohini, Delhi", "zipcodes" : [ "110089" ], "count" : 2 }
 { "_id" : "West Karawal Nagar, New Delhi", "zipcodes" : [ "110094" ], "count" : 2 }
@@ -901,8 +287,6 @@ Type "it" for more
 { "_id" : "Naya Band, Khera", "zipcodes" : [ ], "count" : 1 }
 { "_id" : "Sector - 10, Rohini,, Delhi", "zipcodes" : [ "110085" ], "count" : 1 }
 { "_id" : "Rohini Delhi", "zipcodes" : [ "110085" ], "count" : 1 }
-Type "it" for more
-> it[3G[Jit[5G
 { "_id" : "Gurgaon, Haryana", "zipcodes" : [ "122016" ], "count" : 1 }
 { "_id" : "Noida , Uttar Pradesh", "zipcodes" : [ "201301" ], "count" : 1 }
 { "_id" : "Dwarka", "zipcodes" : [ "110075" ], "count" : 1 }
@@ -919,6 +303,98 @@ Type "it" for more
 { "_id" : "Neew Delhi", "zipcodes" : [ "110025" ], "count" : 1 }
 { "_id" : "Dadri", "zipcodes" : [ "203207" ], "count" : 1 }
 { "_id" : "Badli Industrial Area, Badli, Delhi", "zipcodes" : [ "110042" ], "count" : 1 }
-> it[3G[Jit[5G
-no cursor
-> quit()[3G[Jquit()[9G
+
+> db.maps.distinct("created.user").length
+
+677
+
+> db.maps.aggregate([{$group:{_id:"$created.user", count:{"$sum":1}}}, {$sort:{count:-1}}, {$limit:3}])
+
+{ "_id" : "Oberaffe", "count" : 269265 }
+{ "_id" : "n'garh", "count" : 81574 }
+{ "_id" : "Edolis", "count" : 52010 }
+
+> db.maps.aggregate([{$group:{_id:"$created.user", count:{$sum:1}}}, {$sort:{count:-1}}, {$limit:3}])
+
+{ "_id" : "Oberaffe", "count" : 269265 }
+
+{ "_id" : "n'garh", "count" : 81574 }
+
+{ "_id" : "Edolis", "count" : 52010 }
+
+> db.maps.aggregate([{$group:{_id:"$created.user", count:{$sum:1}}}, {$group: {_id:"$count", total_users:{$sum: 1}}}, {$sort: {_id: 1}}, {$limit: 3}])
+
+{ "_id" : 1, "total_users" : 132 }
+
+{ "_id" : 2, "total_users" : 62 }
+
+{ "_id" : 3, "total_users" : 30 }
+
+> db.maps.aggregate( [{$group: {_id:"$amenity", count:{$sum: 1}}}, {$sort: {count: -1}}, {$limit: 10}])
+
+{ "_id" : null, "count" : 586793 }
+
+{ "_id" : "school", "count" : 880 }
+
+{ "_id" : "place_of_worship", "count" : 297 }
+
+{ "_id" : "parking", "count" : 289 }
+
+{ "_id" : "fuel", "count" : 197 }
+
+{ "_id" : "hospital", "count" : 177 }
+
+{ "_id" : "restaurant", "count" : 130 }
+
+{ "_id" : "atm", "count" : 130 }
+
+{ "_id" : "college", "count" : 124 }
+
+{ "_id" : "bank", "count" : 100 }
+
+> db.maps.aggregate( [{$match: {type: "way"}}, {$group: {_id:"$highway", count:{$sum: 1}}}, {$match: {count: {$gte: 1000}}}, {$sort: {count: -1}}] )
+
+{ "_id" : "residential", "count" : 35686 }
+
+{ "_id" : null, "count" : 23649 }
+
+{ "_id" : "service", "count" : 12726 }
+
+{ "_id" : "tertiary", "count" : 4022 }
+
+{ "_id" : "living_street", "count" : 3636 }
+
+{ "_id" : "unclassified", "count" : 2065 }
+
+{ "_id" : "secondary", "count" : 1794 }
+
+> db.maps.aggregate([{$match: {amenity: {$exists: 1}, amenity:"place_of_worship"}}, {$group: {_id:"$religion", count: {$sum:1}}}, {$match: {_id: {$ne: null}}}, {$sort: {count: -1}}])
+
+{ "_id" : "hindu", "count" : 121 }
+
+{ "_id" : "muslim", "count" : 47 }
+
+{ "_id" : "christian", "count" : 33 }
+
+{ "_id" : "sikh", "count" : 27 }
+
+{ "_id" : "jain", "count" : 5 }
+
+{ "_id" : "buddhist", "count" : 3 
+{ "_id" : "zoroastrian", "count" : 1 }
+
+{ "_id" : "bahai", "count" : 1 }
+
+> db.maps.aggregate([{$match: {amenity: {$exists: 1}, amenity:"restaurant"}}, {$group: {_id:"$cuisine", count: {$sum:1}}}, {$match: {_id: {$ne: null}}}, {$sort: {count: -1}}, {$limit: 5}])
+
+{ "_id" : "indian", "count" : 7 }
+
+{ "_id" : "chinese", "count" : 3 }
+
+{ "_id" : "vegetarian", "count" : 3 }
+
+{ "_id" : "pizza", "count" : 3 }
+
+{ "_id" : "burger", "count" : 2 }
+
+> quit()
