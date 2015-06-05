@@ -11,8 +11,8 @@ import json
 """
 Generate the datamodel (JSON) for MongoDB analysis
 
-Your task is to wrangle the data and transform the shape of the data
-into the model we mentioned earlier. The output should be a list of dictionaries
+Task is to wrangle the data and transform the shape of the data
+into the model we mentioned earlier. The output would be a list of dictionaries
 that look like this:
 
 {
@@ -38,30 +38,25 @@ that look like this:
 "phone": "1 (773)-271-5176"
 }
 
-You have to complete the function 'shape_element'.
-We have provided a function that will parse the map file, and call the function with the element
-as an argument. You should return a dictionary, containing the shaped data for that element.
-We have also provided a way to save the data in a file, so that you could use
-mongoimport later on to import the shaped data into MongoDB. 
+A process map function parses the map file, and then calls the 'shape_element' function with the element
+as an argument. This returns a dictionary, containing the shaped data for that element.
 
-Note that in this exercise we do not use the 'update street name' procedures
-you worked on in the previous exercise. If you are using this code in your final
-project, you are strongly encouraged to use the code from previous exercise to 
-update the street names before you save them to JSON. 
+Finally save the data in a file, so that one could use mongoimport later on to import the
+shaped data into MongoDB. 
 
-In particular the following things should be done:
-- you should process only 2 types of top level tags: "node" and "way"
-- all attributes of "node" and "way" should be turned into regular key/value pairs, except:
-    - attributes in the CREATED array should be added under a key "created"
-    - attributes for latitude and longitude should be added to a "pos" array,
-      for use in geospacial indexing. Make sure the values inside "pos" array are floats
+In particular the following things are done:
+- process only 2 types of top level tags: "node" and "way"
+- all attributes of "node" and "way" are turned into regular key/value pairs, except:
+    - attributes in the CREATED array is  added under a key "created"
+    - attributes for latitude and longitude is  added to a "pos" array,
+      for use in geospacial indexing. Also makes the values inside "pos" array as floats
       and not strings. 
-- if second level tag "k" value contains problematic characters, it should be ignored
-- if second level tag "k" value starts with "addr:", it should be added to a dictionary "address"
-- if second level tag "k" value does not start with "addr:", but contains ":", you can process it
+- if second level tag "k" value contains problematic characters, it is ignored
+- if second level tag "k" value starts with "addr:", it is  added to a dictionary "address"
+- if second level tag "k" value does not start with "addr:", but contains ":", process it
   same as any other tag.
 - if there is a second ":" that separates the type/direction of a street,
-  the tag should be ignored, for example:
+  the tag is ignored, for example:
 
 <tag k="addr:housenumber" v="5158"/>
 <tag k="addr:street" v="North Lincoln Avenue"/>
@@ -70,7 +65,7 @@ In particular the following things should be done:
 <tag k="addr:street:type" v="Avenue"/>
 <tag k="amenity" v="pharmacy"/>
 
-  should be turned into:
+  is turned into:
 
 {...
 "address": {
@@ -86,33 +81,46 @@ In particular the following things should be done:
   <nd ref="305896090"/>
   <nd ref="1719825889"/>
 
-should be turned into
+is  turned into
 "node_refs": ["305896090", "1719825889"]
 """
 
+# Regular expression for key patterns
 
 lower = re.compile(r'^([a-z]|_)*$')
 lower_colon = re.compile(r'^([a-z]|_)*:([a-z]|_)*$')
 problemchars = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 
+# Compound "created" field type
 CREATED = [ "version", "changeset", "timestamp", "user", "uid"]
 
+# Does the given string have problematic characters
 def contains_problematic_chars(v):
     return problemchars.search(v)
-    
+
+# Restructure address as a compund field    
 def shape_address(e, dct):
     if e.attrib["k"].find(":") == e.attrib["k"].rfind(":"): # process single colon address tag only
-        discard, addr_subkey = e.attrib["k"].split(":")
+        discard, addr_subkey = e.attrib["k"].split(":") # only interested in subtag
         dct[addr_subkey] = e.attrib["v"]
 
+# Shape given element
+# Following info is re-shaped to craete a more strcutured element:
+# - Created
+# - Address
+# - Pos, containing lat and long
+# - Ways for node references
+#
 def shape_element(element):
     node = {}
+    
+    # Only interested in "node" and "way" kinf of elements
     if element.tag == "node" or element.tag == "way" :
         # YOUR CODE HERE
         node["type"] = element.tag
         created = {}
         
-        #print element.attrib
+        # Regroup creation related info under "created" 
         for k,v in element.attrib.iteritems():
             if k in CREATED:
                 created[k] = v
@@ -121,9 +129,11 @@ def shape_element(element):
                 
         node["created"] = created
         
+        # Regroup position info under "pos"
         if( "lat" in element.attrib ):
             node["pos"] = [float(element.attrib["lat"]), float(element.attrib["lon"])]
         
+        # Regroup "address" related info under "address"
         address = {}
         for e in element.iter("tag"):
             if contains_problematic_chars(e.attrib["k"]):
@@ -136,7 +146,8 @@ def shape_element(element):
         
         if address != {}:
             node["address"] = address 
-            
+         
+        # Regroup all node references for a way under "noder_refs"
         if element.tag == "way":
             node_refs = []
             for e in element.iter("nd"):
@@ -148,23 +159,25 @@ def shape_element(element):
         
         return node
     else:
+        # Not interested in this element
         return None
 
 
+# Parse the given map file and dump the strcutured JSON to output file
 def process_map(file_in, pretty = False):
-    # You do not need to change this file
     file_out = "{0}.json".format(file_in)
-    #data = []
+    
+    # Iteratively parse input file, re-shaping and writing each element into a structured
+    # JSON element
     with codecs.open(file_out, "w") as fo:
         for _, element in ET.iterparse(file_in):
             el = shape_element(element)
             if el:
-                #data.append(el)
                 if pretty:
                     fo.write(json.dumps(el, indent=2)+"\n")
                 else:
                     fo.write(json.dumps(el) + "\n")
-    #return data
+                    
     return
 
 def test():
@@ -172,8 +185,6 @@ def test():
     # call the process_map procedure with pretty=False. The pretty=True option adds 
     # additional spaces to the output, making it significantly larger.
     process_map(OSMFILE, False)
-    #data = process_map(OSMFILE, False)
-    #pprint.pprint(data)
     
 
 if __name__ == "__main__":

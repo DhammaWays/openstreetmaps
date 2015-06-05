@@ -6,34 +6,37 @@ INPUT_FILE = 'new-delhi_india.osm'
 import xml.etree.ElementTree as ET
 import pprint
 import re
-"""
-Counts valid/invalid MongoDB keys
 
-Your task is to explore the data a bit more.
-Before you process the data and add it into MongoDB, you should
+"""
+Checks for valid/invalid MongoDB keys
+
+Before we process the data and add it into MongoDB, we should
 check the "k" value for each "<tag>" and see if they can be valid keys in MongoDB,
 as well as see if there are any other potential problems.
 
-We have provided you with 3 regular expressions to check for certain patterns
-in the tags. As we saw in the quiz earlier, we would like to change the data model
+Using 3 regular expressions to check for certain patterns
+in the tags. Later on befor epopulating MongoDB, we would like to change the data model
 and expand the "addr:street" type of keys to a dictionary like this:
 {"address": {"street": "Some value"}}
 So, we have to see if we have such tags, and if we have any tags with problematic characters.
-Please complete the function 'key_type'.
 """
 
 
+# Regular expression for key patterns
 lower = re.compile(r'^([a-z]|_)*$')
 lower_colon = re.compile(r'^([a-z]|_)*:([a-z]|_)*$')
 problemchars = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 
 problem_keys = []
 
+# Classify given element into set of key patterns
 def key_type(element, keys):
+    # Only interested in tag elements
+    # Match and map against the key patterns we are inetrested in
     if element.tag == "tag":
-        # YOUR CODE HERE
+        
         v = element.attrib['k']
-        m = lower.search(v)
+        m = lower.search(v) 
         if m:
             keys["lower"] += 1
         else:
@@ -50,6 +53,8 @@ def key_type(element, keys):
         
     return keys
 
+# Parse the gven file, listing down key patterns we may want to explore before
+# putting data in MongoDB
 def process_map(filename):
     keys = {"lower": 0, "lower_colon": 0, "problemchars": 0, "other": 0}
     for _, element in ET.iterparse(filename):
@@ -58,15 +63,12 @@ def process_map(filename):
     return keys
 
 
-
+# Main entry point to parse and list down categorized key 
 def test():
-    # You can use another testfile 'map.osm' to look at your solution
-    # Note that the assertions will be incorrect then.
     keys = process_map(INPUT_FILE)
     pprint.pprint(keys)
     pprint.pprint(problem_keys)
     
-
 
 if __name__ == "__main__":
     test()

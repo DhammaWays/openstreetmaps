@@ -1,0 +1,56 @@
+{'Delhi': set(['Alipur, Delhi',
+               'Badli Industrial Area, Badli, Delhi',
+               'Hira Colony, Siraspur, Delhi',
+               'Libaspur, Delhi',
+               'Mukhrejee Nagar, Delhi',
+               'Pratap Colony, Siraspur, Delhi',
+               'Rohini, Delhi',
+               'Sector - 10, Rohini,, Delhi',
+               'Sector - 11, Rohini, Delhi',
+               'Sector - 12, Rohini, Delhi',
+               'Sector - 15, Rohini, Delhi',
+               'Sector - 17, Rohini, Delhi',
+               'Sector - 28, Rohini, Delhi',
+               'Sector - 5, Rohini, Delhi',
+               'Sector- 10, Rohini, Delhi',
+               'Sector-11, Rohini, Delhi',
+               'Shahbad Daulatpur, Delhi',
+               'Siraspur, Delhi']),
+ 'Ghaziabad': set(['Sahibabad, Ghaziabad']),
+ 'Haryana': set(['Gurgaon, Haryana']),
+ 'Khera': set(['Naya Band, Khera']),
+ 'New Delhi': set(['Chanakyapuri, New Delhi',
+                   'Pandav Nagar, New Delhi',
+                   'Paschim Vihar, New Delhi',
+                   'Pitam Pura, New Delhi',
+                   'Pocket 6, Sector 9, Rohini, New Delhi',
+                   'West Karawal Nagar, New Delhi']),
+ 'Uttar Pradesh': set(['Noida , Uttar Pradesh', 'Noida, Uttar Pradesh'])}
+West Karawal Nagar, New Delhi => New Delhi
+Pocket 6, Sector 9, Rohini, New Delhi => New Delhi
+Paschim Vihar, New Delhi => New Delhi
+Pandav Nagar, New Delhi => New Delhi
+Pitam Pura, New Delhi => New Delhi
+Chanakyapuri, New Delhi => New Delhi
+Gurgaon, Haryana => Gurgaon
+Sahibabad, Ghaziabad => Ghaziabad
+Siraspur, Delhi => Delhi
+Pratap Colony, Siraspur, Delhi => Delhi
+Alipur, Delhi => Delhi
+Mukhrejee Nagar, Delhi => Delhi
+Sector - 17, Rohini, Delhi => Delhi
+Sector-11, Rohini, Delhi => Delhi
+Sector - 15, Rohini, Delhi => Delhi
+Sector - 10, Rohini,, Delhi => Delhi
+Shahbad Daulatpur, Delhi => Delhi
+Libaspur, Delhi => Delhi
+Sector - 28, Rohini, Delhi => Delhi
+Hira Colony, Siraspur, Delhi => Delhi
+Sector - 5, Rohini, Delhi => Delhi
+Sector - 11, Rohini, Delhi => Delhi
+Rohini, Delhi => Delhi
+Sector- 10, Rohini, Delhi => Delhi
+Sector - 12, Rohini, Delhi => Delhi
+Badli Industrial Area, Badli, Delhi => Delhi
+Noida , Uttar Pradesh => Noida
+Noida, Uttar Pradesh => Noida
